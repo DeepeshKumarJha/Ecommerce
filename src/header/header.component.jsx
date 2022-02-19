@@ -6,6 +6,7 @@ const Header = () => {
 		const nav_ul_list = document.querySelector(".nav-ul");
 
 		nav_ul_list.classList.toggle("nav-active");
+		nav_ul_list.classList.toggle("nav-ul-display");
 
 		const nav_ul_li = document.querySelectorAll(".nav-ul li");
 

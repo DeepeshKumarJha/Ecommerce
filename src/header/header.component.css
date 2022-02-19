@@ -57,18 +57,18 @@ nav {
 }
 
 @media only screen and (max-width: 800px) {
-	html,
 	body {
 		overflow-x: hidden;
+		position: relative;
 	}
 	.nav-ul {
 		position: absolute;
 		top: 8vh;
-		height: 100%;
+		height: 92vh;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		width: 100%;
+		width: 100vw;
 		background-color: #0f0e17;
 		transform: translateX(100%);
 		transition: transform 0.5s ease-in;
@@ -95,4 +95,8 @@ nav {
 
 .nav-active {
 	transform: translateX(0%);
+}
+
+.nav-ul-display {
+	display: flex;
 }
