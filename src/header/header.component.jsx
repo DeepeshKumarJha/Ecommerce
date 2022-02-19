@@ -15,7 +15,7 @@ const Header = () => {
 				li.style.animation = "";
 			} else {
 				li.style.animation = `nav-ul-li 1s ease forwards ${
-					index / 7 + 0.5
+					index / 15 + 0.2
 				}s`;
 			}
 		});
