@@ -1,8 +1,8 @@
-import mens from "./images/mens.jpg";
-import womens from "./images/womens.jpg";
-import kids from "./images/kids.jpg";
-import shoes from "./images/shoes.jpg";
-import watches from "./images/watch.jpg";
+import mens from "./images/mens.jpeg";
+import womens from "./images/womens.jpeg";
+import kids from "./images/kids.jpeg";
+import shoes from "./images/shoes.jpeg";
+import watches from "./images/watch.jpeg";
 
 const category = [
 	{
