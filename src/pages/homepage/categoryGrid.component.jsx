@@ -34,7 +34,7 @@ const GridItem = ({ type, image }) => {
 					sx={{ height: "100%", cursor: "pointer" }}
 				>
 					<Grid item>
-						<Typography variant='h2' sx={{ color: "#fff" }}>
+						<Typography variant='h2' sx={{ color: "#fffffe" }}>
 							{type.toUpperCase()}
 						</Typography>
 					</Grid>
