@@ -27,7 +27,7 @@ const Header = () => {
 				<div className='logo'>Shooop</div>
 				<ul className='nav-ul'>
 					<li>
-						<Link to='/mens'>MANS</Link>
+						<Link to='/mens'>MENS</Link>
 					</li>
 					<li>
 						<Link to='/womens'>WOMENS</Link>
