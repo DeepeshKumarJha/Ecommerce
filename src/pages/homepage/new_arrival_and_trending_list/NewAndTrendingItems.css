@@ -1,0 +1,90 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Poppins;
+	background-color: #fffffe;
+}
+
+.list-heading {
+	font-size: 1.5rem;
+	margin-left: 10px;
+	position: relative;
+}
+
+.list-heading::after {
+	content: "";
+	position: absolute;
+	margin-left: 10px;
+	top: 50%;
+	width: 100%;
+	height: 1px;
+	background-color: #f25f4c;
+}
+
+.container {
+	margin-top: 1vh;
+	/* height: 80vh; */
+}
+
+.product-list {
+	display: flex;
+	overflow-x: auto;
+	scrollbar-width: none; /* firefox */
+	-ms-overflow-style: none; /* IE and Edge*/
+}
+
+.product-list::-webkit-scrollbar {
+	display: none; /* Chrome, Safari and Opera */
+}
+
+.product-list li {
+	margin: 0 10px;
+	list-style: none;
+	height: 500px;
+	min-width: 300px;
+
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.card {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: #f25f4c;
+}
+
+.upper-portion {
+	height: 80%;
+	width: 100%;
+}
+.upper-portion img {
+	height: auto;
+	width: 100%;
+}
+
+.lower-portion {
+	height: 20%;
+	width: 100%;
+	background-color: #fffffe;
+	display: flex;
+	flex-direction: column;
+}
+
+.product-title,
+.product-list {
+	color: black;
+}
+
+.product-title {
+	margin-top: 5px;
+	margin-left: 1px;
+	font-size: 1rem;
+}
