@@ -6,7 +6,7 @@ import productTwo from "./DummyData/hmgoepprod1.jpg";
 import productThree from "./DummyData/hmgoepprod2.jpg";
 import productFour from "./DummyData/hmgoepprod3.jpg";
 import productFive from "./DummyData/hmgoepprod4.jpg";
-import { useNavigate } from "react-router-dom";
+
 // dummy data ends
 
 const dummyData = [
@@ -43,7 +43,6 @@ const dummyData = [
 ];
 
 const SingleCard = (props) => {
-	const navigate = useNavigate();
 	const handleCardClick = () => {
 		console.log(`${props.item.id} card is clicked`);
 	};
