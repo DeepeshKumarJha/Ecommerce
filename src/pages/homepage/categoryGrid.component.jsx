@@ -24,8 +24,12 @@ const GridItem = ({ type, image }) => {
 		backgroundSize: "cover",
 	}));
 
+	const handleClick = () => {
+		console.log("something is clicked");
+	};
+
 	return (
-		<Grid item xs={12} sm={12} md={6} lg={4}>
+		<Grid item xs={12} sm={12} md={6} lg={4} onClick={handleClick}>
 			<StyledPaper>
 				<Grid
 					container

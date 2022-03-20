@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import "./header.component.css";
 
 const Header = () => {
@@ -22,33 +22,41 @@ const Header = () => {
 	};
 
 	return (
-		<header>
-			<nav>
-				<div className='logo'>Shooop</div>
-				<ul className='nav-ul'>
-					<li>
-						<Link to='/mens'>MENS</Link>
-					</li>
-					<li>
-						<Link to='/womens'>WOMENS</Link>
-					</li>
-					<li>
-						<Link to='/kids'>KIDS</Link>
-					</li>
-					<li>
-						<Link to='/shoes'>SHOES</Link>
-					</li>
-					<li>
-						<Link to='/watches'>WATCHES</Link>
-					</li>
-				</ul>
-				<div className='nav-burger' onClick={handleBurgerClick}>
-					<div className='line1'></div>
-					<div className='line2'></div>
-					<div className='line3'></div>
-				</div>
-			</nav>
-		</header>
+		<>
+			<header>
+				<nav>
+					<div className='logo'>Shooop</div>
+					<ul className='nav-ul'>
+						<li>
+							<Link to='/mens'>MENS</Link>
+						</li>
+						<li>
+							<Link to='/womens'>WOMENS</Link>
+						</li>
+						<li>
+							<Link to='/kids'>KIDS</Link>
+						</li>
+						<li>
+							<Link to='/shoes'>SHOES</Link>
+						</li>
+						<li>
+							<Link to='/watches'>WATCHES</Link>
+						</li>
+					</ul>
+					<div className='header-user-section'>
+						<span>Login/Signup</span>
+					</div>
+					<div className='nav-burger' onClick={handleBurgerClick}>
+						<div className='line1'></div>
+						<div className='line2'></div>
+						<div className='line3'></div>
+					</div>
+				</nav>
+			</header>
+			<div>
+				<Outlet />
+			</div>
+		</>
 	);
 };
 
