@@ -10,7 +10,15 @@ const LoginSignUpModal = () => {
 		// setting up the initial style
 		login.current.classList.add('lsmc-header-active');
 		signup.current.classList.add('lsmc-header-deactive');
-	});
+
+		document.body.style.overflow = 'hidden';
+		console.log('component mounted');
+
+		return () => {
+			console.log('component unmounted');
+			document.body.style.overflow = 'unset';
+		};
+	}, []);
 
 	const changeState = (e) => {
 		console.log(e);
