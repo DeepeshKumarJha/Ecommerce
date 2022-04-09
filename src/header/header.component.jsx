@@ -1,24 +1,32 @@
-import { Link, Outlet } from "react-router-dom";
-import "./header.component.css";
+import { useState } from 'react';
+import { Link, Outlet } from 'react-router-dom';
+import LoginSignUpModal from '../modals/login_signup_modal.component';
+import './header.component.css';
 
 const Header = () => {
+	const [modalState, SetModalState] = useState(false);
+
 	const handleBurgerClick = () => {
-		const nav_ul_list = document.querySelector(".nav-ul");
+		const nav_ul_list = document.querySelector('.nav-ul');
 
-		nav_ul_list.classList.toggle("nav-active");
-		nav_ul_list.classList.toggle("nav-ul-display");
+		nav_ul_list.classList.toggle('nav-active');
+		nav_ul_list.classList.toggle('nav-ul-display');
 
-		const nav_ul_li = document.querySelectorAll(".nav-ul li");
+		const nav_ul_li = document.querySelectorAll('.nav-ul li');
 
 		nav_ul_li.forEach((li, index) => {
 			if (li.style.animation) {
-				li.style.animation = "";
+				li.style.animation = '';
 			} else {
 				li.style.animation = `nav-ul-li 1s ease forwards ${
 					index / 15 + 0.2
 				}s`;
 			}
 		});
+	};
+
+	const showModal = () => {
+		SetModalState((prev) => !prev);
 	};
 
 	return (
@@ -44,7 +52,7 @@ const Header = () => {
 						</li>
 					</ul>
 					<div className='header-user-section'>
-						<span>Login/Signup</span>
+						<span onClick={showModal}>Login/Signup</span>
 					</div>
 					<div className='nav-burger' onClick={handleBurgerClick}>
 						<div className='line1'></div>
@@ -56,6 +64,7 @@ const Header = () => {
 			<div>
 				<Outlet />
 			</div>
+			{modalState && <LoginSignUpModal />}
 		</>
 	);
 };

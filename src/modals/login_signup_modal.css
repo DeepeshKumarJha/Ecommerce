@@ -1,0 +1,74 @@
+.login-signup-modal-container {
+	position: fixed;
+	height: 50vh;
+	width: 50vw;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #0f0e17;
+	z-index: 100;
+	border-radius: 10px;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+	overflow: hidden;
+}
+
+.lsmc-header {
+	color: #ff8906;
+	text-align: center;
+	font-size: 1.8rem;
+	padding-top: 30px;
+}
+
+.lsmc-login,
+.lsmc-slash,
+.lsmc-signup {
+	display: inline-block;
+	transition: 0.3s;
+}
+
+.lsmc-login,
+.lsmc-signup {
+	cursor: pointer;
+}
+
+.lsmc-slash {
+	font-size: 2rem;
+	padding: 0 10px;
+}
+
+.lsmc-header-active {
+	font-size: 2rem;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.lsmc-header-deactive {
+	font-size: 0.9rem;
+}
+
+.lsmc-input-section {
+	height: 100%;
+	padding-top: 50px;
+}
+
+.lsmc-input-section div {
+	width: 500px;
+	height: 50px;
+	background-color: rgb(31, 30, 39);
+	margin: 10px auto;
+	border: 10px;
+}
+
+.lsmc-btn {
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	background-color: inherit !important;
+}
+
+.lsmc-btn div {
+	height: 100%;
+	width: 200px;
+	border-radius: 15px;
+	background-color: rgb(36, 35, 41);
+}

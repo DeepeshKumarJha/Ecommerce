@@ -46,6 +46,7 @@ nav {
 	position: relative;
 	font-size: 1rem;
 	width: 10%;
+	cursor: pointer;
 }
 
 /* burger logo ends */
